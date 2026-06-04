@@ -18,6 +18,7 @@ import Testimonials from './components/Testimonials';
 import Blog from './components/Blog';
 import FAQ from './components/FAQ';
 import Contact from './components/Contact';
+import Founder from './components/Founder';
 
 // Pages
 import BlogPage from './pages/BlogPage';
@@ -50,6 +51,7 @@ function HomePage() {
       <Testimonials />
       <Blog />
       <FAQ />
+      <Founder />
       <Contact />
     </>
   );
