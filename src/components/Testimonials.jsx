@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Quote, ChevronLeft, ChevronRight, Star } from 'lucide-react';
 import './Testimonials.css';
 
@@ -47,6 +47,16 @@ const testimonials = [
 
 export default function Testimonials() {
   const [current, setCurrent] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
+  const intervalRef = useRef(null);
+
+  useEffect(() => {
+    if (isHovered) return;
+    intervalRef.current = setInterval(() => {
+      setCurrent((c) => (c + 1) % testimonials.length);
+    }, 2000);
+    return () => clearInterval(intervalRef.current);
+  }, [isHovered]);
 
   const prev = () => setCurrent((c) => (c === 0 ? testimonials.length - 1 : c - 1));
   const next = () => setCurrent((c) => (c === testimonials.length - 1 ? 0 : c + 1));
@@ -67,7 +77,11 @@ export default function Testimonials() {
           </p>
         </div>
 
-        <div className="testimonials__layout">
+        <div
+          className="testimonials__layout"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
           <div className="testimonials__main">
             <Quote size={40} className="testimonials__quote-icon" />
             <p className="testimonials__text">&quot;{t.text}&quot;</p>

@@ -1,0 +1,9 @@
+.blog-page {
+  padding: 120px 0 80px;
+  background: var(--primary);
+  min-height: 100vh;
+}
+
+.blog-page__header {
+  margin-bottom: 60px;
+}

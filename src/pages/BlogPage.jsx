@@ -1,27 +1,25 @@
 import { ArrowRight, Calendar, Clock } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import { blogPosts } from '../data/blogPosts';
-import './Blog.css';
+import '../components/Blog.css';
+import './BlogPage.css';
 
-export default function Blog() {
-  const preview = blogPosts.slice(0, 3);
-
+export default function BlogPage() {
   return (
-    <section className="blog" id="blog">
+    <div className="blog-page">
       <div className="container">
-        <div className="section-header">
-          <div className="section-tag">Latest Insights</div>
-          <h2 className="section-title">
-            From Our <span>Knowledge Hub</span>
-          </h2>
+        <div className="section-header blog-page__header">
+          <div className="section-tag">Knowledge Hub</div>
+          <h1 className="section-title">
+            AI & Tech <span>Blog</span>
+          </h1>
           <p className="section-desc">
-            Stay updated with the latest trends in AI, Full Stack development,
-            Data Science, and tech careers.
+            In-depth articles on AI, Full Stack development, Data Science, and the
+            skills shaping the future of tech careers.
           </p>
         </div>
 
         <div className="blog__grid">
-          {preview.map((post) => (
+          {blogPosts.map((post) => (
             <article key={post.slug} className="blog-card">
               <div className="blog-card__img" style={{ background: `linear-gradient(135deg, ${post.color}20, ${post.color}08)`, borderBottom: `1px solid ${post.color}20` }}>
                 <span className="blog-card__cat" style={{ background: `${post.color}18`, color: post.color, borderColor: `${post.color}30` }}>
@@ -45,13 +43,7 @@ export default function Blog() {
             </article>
           ))}
         </div>
-
-        <div className="blog__cta">
-          <Link to="/blog" className="btn-outline">
-            View All Posts <ArrowRight size={16} />
-          </Link>
-        </div>
       </div>
-    </section>
+    </div>
   );
 }

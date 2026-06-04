@@ -29,10 +29,52 @@
   color: var(--accent);
 }
 
-.courses__filter-btn--active {
+.courses__filter-btn--active,
+.courses__filter-btn--active:hover {
   background: var(--accent);
   border-color: var(--accent);
   color: white;
+}
+
+.courses__list-wrap {
+  position: relative;
+}
+
+.courses__fade-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background: linear-gradient(to bottom, transparent, var(--primary));
+  pointer-events: none;
+}
+
+.courses__toggle-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.courses__toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  color: var(--text-secondary);
+  padding: 11px 28px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s;
+  font-family: 'Inter', sans-serif;
+}
+
+.courses__toggle-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
 .courses__grid {

@@ -1,7 +1,16 @@
 import { Phone, Mail, MapPin, ArrowRight } from 'lucide-react';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import './Footer.css';
 
-const quickLinks = ['Home', 'About Us', 'Courses', 'Blog', 'Contact Us'];
+const quickLinks = [
+  { label: 'Home', to: '/', hash: 'hero' },
+  { label: 'About Us', to: '/#about' },
+  { label: 'Courses', to: '/#courses' },
+  { label: 'Blog', to: '/blog' },
+  { label: 'Campus Partnership', to: '/college-partnership' },
+  { label: 'Contact Us', to: '/#contact' },
+];
+
 const courseLinks = [
   'Python Full Stack',
   'Java Full Stack',
@@ -22,19 +31,17 @@ const socials = [
 ];
 
 export default function Footer() {
-  const scrollTo = (id) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-
   return (
     <footer className="footer">
       <div className="footer__glow" />
       <div className="container">
         <div className="footer__top">
           <div className="footer__brand">
-            <div className="footer__logo">
+            <Link to="/" className="footer__logo">
               <span className="logo-zeta">Zeta</span>
               <span className="logo-next">Next</span>
               <span className="logo-mind">mind</span>
-            </div>
+            </Link>
             <p className="footer__brand-desc">
               Empowering careers through AI-integrated software training. Join 600+
               students who transformed their futures with us in Coimbatore.
@@ -51,11 +58,11 @@ export default function Footer() {
           <div className="footer__col">
             <h4 className="footer__col-title">Quick Links</h4>
             <ul>
-              {quickLinks.map((link) => (
-                <li key={link}>
-                  <a onClick={() => scrollTo(link === 'Home' ? 'hero' : link.toLowerCase().replace(' ', '-'))}>
-                    <ArrowRight size={12} /> {link}
-                  </a>
+              {quickLinks.map(({ label, to }) => (
+                <li key={label}>
+                  <Link to={to}>
+                    <ArrowRight size={12} /> {label}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -66,9 +73,9 @@ export default function Footer() {
             <ul>
               {courseLinks.map((link) => (
                 <li key={link}>
-                  <a onClick={() => scrollTo('courses')}>
+                  <Link to="/#courses">
                     <ArrowRight size={12} /> {link}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -77,13 +84,13 @@ export default function Footer() {
           <div className="footer__col">
             <h4 className="footer__col-title">Contact Us</h4>
             <div className="footer__contact-items">
-              <a href="tel:+919786101960" className="footer__contact-item">
+              <a href="tel:+917356764410" className="footer__contact-item">
                 <Phone size={15} color="#e8192c" />
-                <span>+91 97861 01960</span>
+                <span>+91 73567 64410</span>
               </a>
-              <a href="mailto:zetanextmind@gmail.com" className="footer__contact-item">
+              <a href="mailto:admissions@zetanextmind.com" className="footer__contact-item">
                 <Mail size={15} color="#5b8af5" />
-                <span>zetanextmind@gmail.com</span>
+                <span>admissions@zetanextmind.com</span>
               </a>
               <div className="footer__contact-item">
                 <MapPin size={15} color="#22c55e" />
@@ -106,8 +113,8 @@ export default function Footer() {
         <div className="footer__bottom">
           <p>© 2025 Zeta Nextmind Institute. All rights reserved.</p>
           <div className="footer__bottom-links">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
+            <Link to="/privacy-policy">Privacy Policy</Link>
+            <Link to="/terms-of-service">Terms of Service</Link>
             <a href="#">Sitemap</a>
           </div>
         </div>

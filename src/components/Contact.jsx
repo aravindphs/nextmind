@@ -6,15 +6,15 @@ const info = [
   {
     icon: Phone,
     label: 'Call Us',
-    value: '+91 97861 01960',
-    href: 'tel:+919786101960',
+    value: '+91 73567 64410',
+    href: 'tel:+917356764410',
     color: '#e8192c',
   },
   {
     icon: Mail,
     label: 'Email Us',
-    value: 'zetanextmind@gmail.com',
-    href: 'mailto:zetanextmind@gmail.com',
+    value: 'admissions@zetanextmind.com',
+    href: 'mailto:admissions@zetanextmind.com',
     color: '#5b8af5',
   },
   {

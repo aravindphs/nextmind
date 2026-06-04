@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Navbar.css';
 
 const coursesMenu = [
@@ -20,6 +21,8 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [coursesOpen, setCoursesOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -30,17 +33,21 @@ export default function Navbar() {
   const scrollTo = (id) => {
     setMobileOpen(false);
     setCoursesOpen(false);
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    if (location.pathname === '/') {
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      navigate(`/#${id}`);
+    }
   };
 
   return (
     <header className={`navbar${scrolled ? ' navbar--scrolled' : ''}`}>
       <div className="container navbar__inner">
-        <a className="navbar__logo" onClick={() => scrollTo('hero')}>
+        <Link to="/" className="navbar__logo">
           <span className="logo-zeta">Zeta</span>
           <span className="logo-next">Next</span>
           <span className="logo-mind">mind</span>
-        </a>
+        </Link>
 
         <nav className={`navbar__links${mobileOpen ? ' navbar__links--open' : ''}`}>
           <a onClick={() => scrollTo('hero')}>Home</a>
@@ -61,7 +68,7 @@ export default function Navbar() {
               </div>
             )}
           </div>
-          <a onClick={() => scrollTo('blog')}>Blog</a>
+          <Link to="/blog" onClick={() => setMobileOpen(false)}>Blog</Link>
           <a onClick={() => scrollTo('contact')}>Contact Us</a>
         </nav>
 
@@ -79,7 +86,7 @@ export default function Navbar() {
           <a onClick={() => scrollTo('hero')}>Home</a>
           <a onClick={() => scrollTo('about')}>About Us</a>
           <a onClick={() => scrollTo('courses')}>Courses</a>
-          <a onClick={() => scrollTo('blog')}>Blog</a>
+          <Link to="/blog" onClick={() => setMobileOpen(false)}>Blog</Link>
           <a onClick={() => scrollTo('contact')}>Contact Us</a>
           <a className="btn-primary" onClick={() => scrollTo('contact')}>Enroll Now</a>
         </div>
