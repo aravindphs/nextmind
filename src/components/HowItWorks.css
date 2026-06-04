@@ -1,0 +1,106 @@
+.hiw {
+  padding: 100px 0;
+  background: var(--primary);
+}
+
+.hiw__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  position: relative;
+}
+
+.hiw__card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+  padding: 36px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.hiw__card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  border-color: rgba(232, 25, 44, 0.2);
+}
+
+.hiw__connector {
+  position: absolute;
+  top: 50px;
+  right: -17px;
+  width: 34px;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(232,25,44,0.4), rgba(91,138,245,0.4));
+  z-index: 1;
+}
+
+.hiw__step-badge {
+  font-size: 13px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 2px;
+  padding: 5px 16px;
+  border-radius: 50px;
+  border: 1px solid;
+}
+
+.hiw__icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 20px;
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hiw__title {
+  font-size: 20px;
+  color: var(--text-primary);
+}
+
+.hiw__desc {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.hiw__points {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  text-align: left;
+  margin-top: 4px;
+}
+
+.hiw__points li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.hiw__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .hiw__grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .hiw__connector { display: none !important; }
+}
