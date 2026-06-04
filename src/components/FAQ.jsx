@@ -4,28 +4,32 @@ import './FAQ.css';
 
 const faqs = [
   {
-    q: 'What makes Zeta Nextmind courses unique compared to others?',
-    a: 'Our courses integrate AI tools throughout the curriculum — you don\'t just learn programming, you learn to build with AI assistance. Every module includes AI-enhanced exercises, real-world projects, and access to tools like GitHub Copilot, ChatGPT, and specialized AI platforms relevant to your domain.',
+    q: 'Will I get the same quality as a physical classroom?',
+    a: 'Yes — often better. Our batches are capped at 15 students, so you get more personal attention than in most offline classrooms. Live sessions run over Google Meet, screen-shares are in HD, and instructors pause for questions after every concept. Recorded backups mean you never miss a detail.',
   },
   {
-    q: 'What Full Stack Development courses do you offer?',
-    a: 'We offer three comprehensive Full Stack programs: AI-Integrated Python Full Stack (HTML, CSS, JS, Bootstrap, Python, Django, MySQL), AI-Integrated Java Full Stack (Java, Spring Boot, MySQL), and AI-Integrated MERN Stack (React, Node.js, Express, MongoDB). All include AI tool integration.',
+    q: 'What if I miss a class or fall behind?',
+    a: 'Every session is recorded and uploaded within 24 hours. If you miss a live class, watch the recording, drop your doubts in the WhatsApp group, and a TA will respond the same day. Missed assignments can be submitted within 48 hours without penalty.',
   },
   {
-    q: 'How is AI integrated into programming courses?',
-    a: 'AI is woven throughout — you\'ll use AI code assistants for pair programming, AI-powered debugging tools, automated code review, and AI-driven testing. You\'ll also build AI-powered features into your projects, making your portfolio stand out to employers.',
+    q: 'Is the certificate recognised by employers?',
+    a: 'Our certificate carries the Zeta Nextmind seal and Aravind Kumar\'s signature. More importantly, you graduate with 3 deployed live projects, a polished GitHub portfolio, and a LinkedIn profile reviewed by our placement team. Employers hire you for your work — the certificate validates it.',
   },
   {
-    q: 'What does the Web Designing course cover?',
-    a: 'Our AI-Integrated Web Designing course covers HTML5, CSS3, JavaScript, responsive design, Figma, and how to use Generative AI tools to accelerate design workflows. You\'ll build a complete portfolio with 5+ projects demonstrating both design skills and AI proficiency.',
+    q: 'How do AI tools fit into the course — are they extras or core?',
+    a: 'AI tools are core workflow, not extras. From Week 1 you\'ll use tools like GitHub Copilot, Cursor, v0.dev, and ChatGPT alongside every concept taught. The goal is to make you 3–5× faster than a developer who doesn\'t use AI — because that\'s what employers now expect.',
   },
   {
-    q: 'How does AI enhance the Data Analytics learning experience?',
-    a: 'In our Data Analytics courses, you\'ll use AI for automated data cleaning, AI-powered visualization suggestions in Power BI, machine learning for predictive analytics, and NLP for unstructured data analysis. This goes far beyond traditional data analytics training.',
+    q: 'What is the batch size and schedule?',
+    a: 'We cap every batch at 15 students — this is non-negotiable. Classes run on weekday evenings (7–9 PM IST) and Saturday mornings, making them compatible with college schedules or part-time jobs. Weekend-only batches are available on request.',
   },
   {
-    q: 'What is included with the course enrollment?',
-    a: 'Every enrollment includes: live instructor-led classes, recorded sessions for revision, hands-on projects, AI tool access, one-on-one mentoring, placement preparation (resume, LinkedIn, mock interviews), an industry-recognized certificate, and lifetime access to alumni support network.',
+    q: 'How does placement support actually work?',
+    a: 'Placement support begins at Week 18, not at the end. You\'ll do 3 live mock interviews, get your resume reviewed for ATS keywords, and have a LinkedIn profile optimised with our placement team. We also share active job leads and make warm introductions where possible. Our target is job offers, not just certificates.',
+  },
+  {
+    q: 'Can I join if I have zero coding experience?',
+    a: 'Absolutely. Our Python Full Stack, Web Designing, Data Analytics, and No-Code AI courses are designed for absolute beginners. The first 4 weeks focus entirely on foundations before any framework is introduced. If you\'re unsure which track suits you, book a free demo class — we\'ll tell you honestly.',
   },
 ];
 

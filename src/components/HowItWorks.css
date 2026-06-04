@@ -129,31 +129,46 @@
   100% { stroke-dashoffset: -1; }
 }
 
-/* Mobile — single column, hide SVG lines */
+/* Mobile — keep zigzag, scale down nodes */
 @media (max-width: 768px) {
   .hiw__timeline {
-    gap: 36px;
+    gap: 40px;
   }
 
-  .hiw__step,
-  .hiw__step--left,
+  .hiw__step {
+    gap: 16px;
+  }
+
+  .hiw__step--left {
+    flex-direction: row;
+  }
+
   .hiw__step--right {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
+    flex-direction: row-reverse;
   }
 
   .hiw__node {
-    width: 88px;
-    height: 88px;
+    width: 72px;
+    height: 72px;
+  }
+
+  .hiw__node::before {
+    display: none;
+  }
+
+  .hiw__node-num {
+    font-size: 20px;
   }
 
   .hiw__card {
-    padding: 24px;
-    width: 100%;
+    padding: 20px;
   }
 
-  .hiw__svg {
-    display: none;
+  .hiw__card-title {
+    font-size: 17px;
+  }
+
+  .hiw__card-desc {
+    font-size: 13px;
   }
 }

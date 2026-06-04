@@ -3,23 +3,24 @@ import { Link, useNavigate, useLocation } from 'react-router-dom';
 import './Footer.css';
 
 const quickLinks = [
-  { label: 'Home', to: '/', hash: 'hero' },
+  { label: 'Home', to: '/' },
   { label: 'About Us', to: '/#about' },
   { label: 'Courses', to: '/#courses' },
+  { label: 'Internship', to: '/internship' },
   { label: 'Blog', to: '/blog' },
   { label: 'Campus Partnership', to: '/college-partnership' },
   { label: 'Contact Us', to: '/#contact' },
 ];
 
 const courseLinks = [
-  'Python Full Stack',
-  'Java Full Stack',
-  'MERN Stack',
-  'Data Science',
-  'Data Analytics',
-  'Web Designing',
-  'UI/UX Course',
-  'Digital Marketing',
+  { label: 'Python Full Stack', slug: 'python-full-stack' },
+  { label: 'Java Full Stack', slug: 'java-full-stack' },
+  { label: 'MERN Stack', slug: 'mern-stack' },
+  { label: 'Data Science', slug: 'data-science' },
+  { label: 'Data Analytics', slug: 'data-analytics-power-bi' },
+  { label: 'Web Designing', slug: 'web-designing' },
+  { label: 'UI/UX Course', slug: 'ui-ux' },
+  { label: 'Digital Marketing', slug: 'digital-marketing' },
 ];
 
 const socials = [
@@ -71,10 +72,10 @@ export default function Footer() {
           <div className="footer__col">
             <h4 className="footer__col-title">Our Courses</h4>
             <ul>
-              {courseLinks.map((link) => (
-                <li key={link}>
-                  <Link to="/#courses">
-                    <ArrowRight size={12} /> {link}
+              {courseLinks.map(({ label, slug }) => (
+                <li key={slug}>
+                  <Link to={`/courses/${slug}`}>
+                    <ArrowRight size={12} /> {label}
                   </Link>
                 </li>
               ))}

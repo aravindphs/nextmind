@@ -6,11 +6,15 @@ export default function Founder() {
     <section className="founder" id="founder">
       <div className="container">
         <div className="founder__inner">
-          <div className="founder__visual">
+          <div className="founder__left">
             <div className="founder__avatar-wrap">
               <div className="founder__avatar">AK</div>
               <div className="founder__avatar-ring founder__avatar-ring--1" />
               <div className="founder__avatar-ring founder__avatar-ring--2" />
+            </div>
+            <div className="founder__identity">
+              <span className="founder__sig-name">Aravind Kumar</span>
+              <span className="founder__sig-role">Founder &amp; CEO, Zeta Nextmind</span>
             </div>
           </div>
 
@@ -39,11 +43,6 @@ export default function Founder() {
             <p className="founder__note">
               I personally read and respond to every email. You can expect a reply within 48 hours.
             </p>
-
-            <div className="founder__sig">
-              <span className="founder__sig-name">Aravind Kumar</span>
-              <span className="founder__sig-role">Founder &amp; CEO, Zeta Nextmind Institute</span>
-            </div>
           </div>
         </div>
       </div>

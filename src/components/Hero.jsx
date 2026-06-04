@@ -41,16 +41,8 @@ export default function Hero() {
             <button className="btn-primary" onClick={() => scrollTo('contact')}>
               Enroll Now <ArrowRight size={16} />
             </button>
-            <a
-              className="hero__video-btn"
-              href="https://www.youtube.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span className="hero__play-icon">
-                <Play size={16} fill="white" />
-              </span>
-              Watch Demo
+            <a className="btn-outline" href="tel:+917356764410">
+              Book Free Demo Class
             </a>
           </div>
         </div>

@@ -1,0 +1,141 @@
+.commtrain {
+  padding: 100px 0;
+  background: var(--primary);
+}
+
+.commtrain__inner {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 72px;
+  align-items: start;
+}
+
+/* Left */
+.commtrain__title {
+  font-size: clamp(26px, 3.2vw, 38px);
+  color: var(--text-primary);
+  line-height: 1.25;
+  margin: 12px 0 20px;
+}
+
+.commtrain__title span {
+  color: var(--accent);
+}
+
+.commtrain__quote {
+  font-size: 16px;
+  font-style: italic;
+  color: var(--text-primary);
+  border-left: 3px solid var(--accent);
+  padding-left: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.commtrain__desc {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 32px;
+}
+
+.commtrain__highlights {
+  display: flex;
+  gap: 32px;
+}
+
+.commtrain__highlight {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.commtrain__highlight-num {
+  font-size: 36px;
+  font-weight: 800;
+  font-family: 'Poppins', sans-serif;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.commtrain__highlight-label {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* Right */
+.commtrain__right {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.commtrain__activity {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 16px 20px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  transition: all 0.25s;
+}
+
+.commtrain__activity:hover {
+  border-color: rgba(255,255,255,0.12);
+  transform: translateX(4px);
+}
+
+.commtrain__activity-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.commtrain__activity-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.commtrain__activity-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.commtrain__activity-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.commtrain__activity-freq {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 10px;
+  border-radius: 50px;
+  border: 1px solid;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.commtrain__activity-purpose {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .commtrain__inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}

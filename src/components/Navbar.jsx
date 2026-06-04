@@ -4,17 +4,17 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Navbar.css';
 
 const coursesMenu = [
-  'AI-Integrated Python Full Stack',
-  'AI-Integrated Java Full Stack',
-  'AI-Integrated MERN Stack',
-  'AI-Integrated Data Science',
-  'AI-Integrated Data Analytics',
-  'SQL Database Master Course',
-  'AI-Integrated Web Designing',
-  'AI-Integrated UI/UX Course',
-  'No Code Website using Gen AI',
-  'AI Development (NLP & CV)',
-  'AI-Integrated Digital Marketing',
+  { label: 'AI-Integrated Python Full Stack', slug: 'python-full-stack' },
+  { label: 'AI-Integrated Java Full Stack', slug: 'java-full-stack' },
+  { label: 'AI-Integrated MERN Stack', slug: 'mern-stack' },
+  { label: 'AI-Integrated Data Science', slug: 'data-science' },
+  { label: 'AI-Integrated Data Analytics', slug: 'data-analytics-power-bi' },
+  { label: 'SQL Database Master Course', slug: 'sql-master' },
+  { label: 'AI-Integrated Web Designing', slug: 'web-designing' },
+  { label: 'AI-Integrated UI/UX Course', slug: 'ui-ux' },
+  { label: 'No Code Website using Gen AI', slug: 'no-code-ai' },
+  { label: 'AI Development (NLP & CV)', slug: 'ai-development' },
+  { label: 'AI-Integrated Digital Marketing', slug: 'digital-marketing' },
 ];
 
 export default function Navbar() {
@@ -62,12 +62,19 @@ export default function Navbar() {
             </span>
             {coursesOpen && (
               <div className="dropdown-menu">
-                {coursesMenu.map((c) => (
-                  <a key={c} onClick={() => scrollTo('courses')}>{c}</a>
+                {coursesMenu.map(({ label, slug }) => (
+                  <Link
+                    key={slug}
+                    to={`/courses/${slug}`}
+                    onClick={() => setCoursesOpen(false)}
+                  >
+                    {label}
+                  </Link>
                 ))}
               </div>
             )}
           </div>
+          <Link to="/internship" onClick={() => setMobileOpen(false)}>Internship</Link>
           <Link to="/blog" onClick={() => setMobileOpen(false)}>Blog</Link>
           <a onClick={() => scrollTo('contact')}>Contact Us</a>
         </nav>
@@ -86,6 +93,7 @@ export default function Navbar() {
           <a onClick={() => scrollTo('hero')}>Home</a>
           <a onClick={() => scrollTo('about')}>About Us</a>
           <a onClick={() => scrollTo('courses')}>Courses</a>
+          <Link to="/internship" onClick={() => setMobileOpen(false)}>Internship</Link>
           <Link to="/blog" onClick={() => setMobileOpen(false)}>Blog</Link>
           <a onClick={() => scrollTo('contact')}>Contact Us</a>
           <a className="btn-primary" onClick={() => scrollTo('contact')}>Enroll Now</a>
