@@ -30,8 +30,13 @@ body {
   font-family: 'Inter', sans-serif;
   background-color: var(--primary);
   color: var(--text-primary);
-  overflow-x: hidden;
   line-height: 1.6;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -50,9 +55,24 @@ img {
   max-width: 100%;
 }
 
-#root {
-  width: 100%;
-  min-height: 100vh;
+/* Text justification — newspaper paragraph style */
+p:not(.section-tag):not(.course-card__desc):not(.contact__info-label):not(.contact__info-value):not(.intern__hero-stat-label):not(.intern__program-sub):not(.intern__elig-label) {
+  text-align: justify;
+  hyphens: auto;
+}
+
+.section-desc {
+  text-align: center !important;
+  hyphens: none;
+}
+
+.founder__message,
+.intern__subtitle,
+.cd__para,
+.cp__subtitle,
+.hiw__card-desc {
+  text-align: justify;
+  hyphens: auto;
 }
 
 .container {

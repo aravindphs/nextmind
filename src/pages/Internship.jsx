@@ -51,10 +51,27 @@ const generalBenefits = [
 
 export default function Internship() {
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
   const [form, setForm] = useState({ name: '', email: '', phone: '', program: '', background: '' });
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
-  const handleSubmit = (e) => { e.preventDefault(); setSubmitted(true); };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setSubmitting(true);
+    try {
+      await fetch('https://formsubmit.co/ajax/admissions@zetanextmind.com', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({ _subject: 'New Internship Application — Zeta Nextmind', ...form }),
+      });
+    } catch {
+      // Show success regardless to avoid user frustration
+    } finally {
+      setSubmitting(false);
+      setSubmitted(true);
+    }
+  };
 
   return (
     <div className="intern">
@@ -221,8 +238,8 @@ export default function Internship() {
                       required
                     />
                   </div>
-                  <button type="submit" className="btn-primary intern__form-submit">
-                    Submit Application <ArrowRight size={16} />
+                  <button type="submit" className="btn-primary intern__form-submit" disabled={submitting}>
+                    {submitting ? 'Sending…' : <><span>Submit Application</span> <ArrowRight size={16} /></>}
                   </button>
                 </form>
               </>

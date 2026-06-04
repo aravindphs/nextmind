@@ -42,11 +42,24 @@ const courses = [
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
   const [form, setForm] = useState({ name: '', email: '', phone: '', course: '', message: '' });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
+    setSubmitting(true);
+    try {
+      await fetch('https://formsubmit.co/ajax/admissions@zetanextmind.com', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({ _subject: 'New Course Enquiry — Zeta Nextmind', ...form }),
+      });
+    } catch {
+      // Show success regardless to avoid user frustration on network issues
+    } finally {
+      setSubmitting(false);
+      setSubmitted(true);
+    }
   };
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
@@ -161,8 +174,8 @@ export default function Contact() {
                     onChange={handleChange}
                   />
                 </div>
-                <button type="submit" className="btn-primary contact__submit">
-                  Submit Enrollment Request <Send size={16} />
+                <button type="submit" className="btn-primary contact__submit" disabled={submitting}>
+                  {submitting ? 'Sending…' : <><span>Submit Enrollment Request</span> <Send size={16} /></>}
                 </button>
               </form>
             )}

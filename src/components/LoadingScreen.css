@@ -1,0 +1,108 @@
+.loading {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: #0a0e27;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+}
+
+/* Orbit rings */
+.loading__rings {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  flex-shrink: 0;
+}
+
+.loading__ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1.5px dashed rgba(232, 25, 44, 0.45);
+  animation: spin-slow 3s linear infinite;
+}
+
+.loading__ring--inner {
+  inset: 22px;
+  border-color: rgba(91, 138, 245, 0.4);
+  animation-duration: 2s;
+  animation-direction: reverse;
+}
+
+.loading__monogram {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 38px;
+  font-weight: 800;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #e8192c, #ff4a5e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: loading-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes loading-pulse {
+  0%, 100% { opacity: 1; filter: drop-shadow(0 0 12px rgba(232,25,44,0.6)); }
+  50% { opacity: 0.7; filter: drop-shadow(0 0 24px rgba(232,25,44,0.9)); }
+}
+
+/* Logo text */
+.loading__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  animation: fadeInUp 0.6s 0.3s ease both;
+}
+
+.loading__logo {
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.loading__logo-zeta { color: #e8192c; }
+.loading__logo-next { color: #ffffff; }
+.loading__logo-mind { color: #6b7090; }
+
+.loading__tagline {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #6b7090;
+  text-align: left !important;
+  hyphens: none !important;
+}
+
+/* Progress bar */
+.loading__progress-wrap {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.loading__progress {
+  height: 100%;
+  background: linear-gradient(90deg, #e8192c, #ff4a5e);
+  animation: loading-bar 1.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  text-align: left !important;
+  hyphens: none !important;
+}
+
+@keyframes loading-bar {
+  from { width: 0; }
+  to { width: 100%; }
+}

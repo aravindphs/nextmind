@@ -113,8 +113,26 @@ export default function CollegePartnership() {
   const [submitted, setSubmitted] = useState(false);
   const [form, setForm] = useState({ college: '', name: '', email: '', phone: '', students: '', program: '', message: '' });
 
+  const [submitting, setSubmitting] = useState(false);
+
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
-  const handleSubmit = (e) => { e.preventDefault(); setSubmitted(true); };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setSubmitting(true);
+    try {
+      await fetch('https://formsubmit.co/ajax/admissions@zetanextmind.com', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({ _subject: 'New Campus Partnership Enquiry — Zeta Nextmind', ...form }),
+      });
+    } catch {
+      // Show success regardless to avoid user frustration
+    } finally {
+      setSubmitting(false);
+      setSubmitted(true);
+    }
+  };
 
   return (
     <div className="cp">
@@ -271,8 +289,8 @@ export default function CollegePartnership() {
                   <label>Additional Requirements</label>
                   <textarea name="message" placeholder="Tell us about your goals, timeline, or any specific requirements..." rows={4} value={form.message} onChange={handleChange} />
                 </div>
-                <button type="submit" className="btn-primary cp__form-submit">
-                  Submit Partnership Inquiry <Send size={16} />
+                <button type="submit" className="btn-primary cp__form-submit" disabled={submitting}>
+                  {submitting ? 'Sending…' : <><span>Submit Partnership Inquiry</span> <Send size={16} /></>}
                 </button>
               </form>
             )}

@@ -1,4 +1,4 @@
-import { Play, ArrowRight, CheckCircle } from 'lucide-react';
+import { ArrowRight, CheckCircle } from 'lucide-react';
 import './Hero.css';
 
 const highlights = [

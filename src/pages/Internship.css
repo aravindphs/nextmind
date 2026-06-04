@@ -311,3 +311,16 @@
   .intern__benefits-inner { grid-template-columns: 1fr; gap: 40px; }
   .intern__form-wrap { padding: 28px; }
 }
+
+@media (max-width: 480px) {
+  .intern__hero { padding: 90px 0 60px; }
+  .intern__hero-stats { gap: 20px; }
+  .intern__hero-stat-num { font-size: 28px; }
+  .intern__title { font-size: clamp(26px, 7vw, 40px); }
+  .intern__subtitle { font-size: 15px; }
+  .intern__form-wrap { padding: 20px 16px; }
+  .intern__form-title { font-size: 20px; }
+  .intern__benefits-inner { gap: 24px; }
+  .intern__quote-card { padding: 20px; }
+  .intern__section { padding: 60px 0; }
+}

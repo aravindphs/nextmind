@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './index.css';
 
@@ -5,6 +6,9 @@ import ScrollToTop from './components/ScrollToTop';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Founder from './components/Founder';
+import LoadingScreen from './components/LoadingScreen';
+import WhatsAppFloat from './components/WhatsAppFloat';
+import EnquiryPopup from './components/EnquiryPopup';
 
 // Home page sections
 import Hero from './components/Hero';
@@ -73,13 +77,22 @@ function HomePage() {
       <Blog />
       <FAQ />
       <Contact />
+      <EnquiryPopup />
     </>
   );
 }
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const t = setTimeout(() => setLoading(false), 1500);
+    return () => clearTimeout(t);
+  }, []);
+
   return (
     <>
+      {loading && <LoadingScreen />}
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Layout><HomePage /></Layout>} />
@@ -91,6 +104,7 @@ function App() {
         <Route path="/privacy-policy" element={<LegalLayout><PrivacyPolicy /></LegalLayout>} />
         <Route path="/terms-of-service" element={<LegalLayout><TermsOfService /></LegalLayout>} />
       </Routes>
+      <WhatsAppFloat />
     </>
   );
 }
