@@ -7,7 +7,7 @@ export default function LoadingScreen() {
         <div className="loading__ring loading__ring--outer" />
         <div className="loading__ring loading__ring--inner" />
         <div className="loading__center">
-          <img src="/logo.png" alt="Zeta Nextmind" className="loading__logo-img" />
+          <img src="/logo.svg" alt="Zeta Nextmind" className="loading__logo-img" />
         </div>
       </div>
 

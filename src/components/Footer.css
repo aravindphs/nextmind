@@ -32,11 +32,11 @@
 }
 
 .footer__logo-img {
-  height: 32px;
+  height: 40px;
   width: auto;
-  background: white;
+  /* background: white;
   border-radius: 6px;
-  padding: 4px 10px;
+  padding: 4px 10px; */
 }
 .logo-mind { color: var(--text-muted); }
 

@@ -43,11 +43,11 @@
 }
 
 .loading__logo-img {
-  width: 96px;
+  width: 226px;
   height: auto;
-  background: white;
+  /* background: white;
   border-radius: 8px;
-  padding: 8px 12px;
+  padding: 8px 12px; */
   box-shadow: 0 0 32px rgba(232, 25, 44, 0.25);
 }
 
