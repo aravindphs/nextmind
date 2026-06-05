@@ -6,19 +6,19 @@ import './YouTube.css';
 // Get them from your video URL: youtube.com/watch?v=VIDEO_ID_HERE
 const videos = [
   {
-    id: 'REPLACE_VIDEO_ID_1',
-    title: 'What Makes Zeta Nextmind Different? AI-Integrated Learning Explained',
+    id: 'IH6ueuf3Cwc',
+    title: 'Master If-Else and Nested If Statements in JavaScript in Tamil | Real-World Examples',
     views: '',
   },
   {
-    id: 'REPLACE_VIDEO_ID_2',
-    title: 'Full Stack Development Demo Day — Student Projects Live',
+    id: 'HQOfzr7VKJI',
+    title: 'Install and Run Your First React Application | Tamil Tutorial',
     views: '',
     featured: true,
   },
   {
-    id: 'REPLACE_VIDEO_ID_3',
-    title: 'How We Train Students with Real AI Tools — Inside Look',
+    id: 'yVzdnT1UCQo',
+    title: 'React Components Explained in Tamil | What is Components?',
     views: '',
   },
 ];
