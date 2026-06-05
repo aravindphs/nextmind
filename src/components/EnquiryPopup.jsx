@@ -137,6 +137,8 @@ export default function EnquiryPopup() {
                     placeholder="+91 XXXXX XXXXX"
                     value={form.phone}
                     onChange={handleChange}
+                    pattern="[+]?[\d\s\-]{10,15}"
+                    title="Enter a valid phone number (10–15 digits)"
                     required
                   />
                 </div>

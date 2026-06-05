@@ -263,7 +263,7 @@ export default function CollegePartnership() {
                   </div>
                   <div className="form__group">
                     <label>Phone Number *</label>
-                    <input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" value={form.phone} onChange={handleChange} required />
+                    <input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" value={form.phone} onChange={handleChange} pattern="[+]?[\d\s\-]{10,15}" title="Enter a valid phone number (10–15 digits)" required />
                   </div>
                 </div>
                 <div className="form__row">

@@ -62,3 +62,19 @@
   background: var(--accent);
   flex-shrink: 0;
 }
+
+@media (max-width: 640px) {
+  .partners {
+    padding: 40px 0;
+  }
+
+  .partners__label {
+    font-size: 11px;
+    margin-bottom: 20px;
+  }
+
+  .partners__chip {
+    padding: 8px 14px;
+    font-size: 12px;
+  }
+}

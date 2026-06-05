@@ -37,6 +37,8 @@ import CourseDetail from './pages/CourseDetail';
 import Internship from './pages/Internship';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
+import NotFound from './pages/NotFound';
+import ErrorBoundary from './components/ErrorBoundary';
 
 function Layout({ children }) {
   return (
@@ -92,7 +94,7 @@ function App() {
   }, []);
 
   return (
-    <>
+    <ErrorBoundary>
       {loading && <LoadingScreen />}
       <ScrollToTop />
       <Routes>
@@ -104,10 +106,11 @@ function App() {
         <Route path="/internship" element={<Layout><Internship /></Layout>} />
         <Route path="/privacy-policy" element={<LegalLayout><PrivacyPolicy /></LegalLayout>} />
         <Route path="/terms-of-service" element={<LegalLayout><TermsOfService /></LegalLayout>} />
+        <Route path="*" element={<LegalLayout><NotFound /></LegalLayout>} />
       </Routes>
       <WhatsAppFloat />
       <ChatBot />
-    </>
+    </ErrorBoundary>
   );
 }
 

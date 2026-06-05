@@ -114,7 +114,7 @@ export default function Footer() {
           <div className="footer__bottom-links">
             <Link to="/privacy-policy">Privacy Policy</Link>
             <Link to="/terms-of-service">Terms of Service</Link>
-            <a href="#">Sitemap</a>
+            <a href="/sitemap.xml" target="_blank" rel="noopener noreferrer">Sitemap</a>
           </div>
         </div>
       </div>
