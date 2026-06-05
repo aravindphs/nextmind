@@ -1,4 +1,6 @@
 import { Phone, Mail, MapPin, ArrowRight } from 'lucide-react';
+import { FaFacebook, FaLinkedinIn, FaInstagram, FaYoutube } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import './Footer.css';
 
@@ -24,11 +26,11 @@ const courseLinks = [
 ];
 
 const socials = [
-  { label: 'f', href: '#', title: 'Facebook' },
-  { label: 'in', href: '#', title: 'LinkedIn' },
-  { label: 'ig', href: '#', title: 'Instagram' },
-  { label: 'yt', href: '#', title: 'YouTube' },
-  { label: 'x', href: '#', title: 'X / Twitter' },
+  { icon: FaFacebook, href: '#', title: 'Facebook' },
+  { icon: FaLinkedinIn, href: '#', title: 'LinkedIn' },
+  { icon: FaInstagram, href: '#', title: 'Instagram' },
+  { icon: FaYoutube, href: 'https://www.youtube.com/@ZetaNextMind', title: 'YouTube' },
+  { icon: FaXTwitter, href: '#', title: 'X / Twitter' },
 ];
 
 export default function Footer() {
@@ -46,9 +48,9 @@ export default function Footer() {
               students who transformed their futures with us in Coimbatore.
             </p>
             <div className="footer__socials">
-              {socials.map(({ label, href, title }) => (
-                <a key={title} href={href} aria-label={title} className="footer__social">
-                  <span style={{ fontSize: 11, fontWeight: 700, textTransform: 'uppercase', lineHeight: 1 }}>{label}</span>
+              {socials.map(({ icon: Icon, href, title }) => (
+                <a key={title} href={href} aria-label={title} className="footer__social" target={href !== '#' ? '_blank' : undefined} rel="noopener noreferrer">
+                  <Icon size={16} />
                 </a>
               ))}
             </div>

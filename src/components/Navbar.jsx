@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
+import { FaYoutube } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Navbar.css';
 
@@ -95,6 +96,26 @@ export default function Navbar() {
           <Link to="/blog" onClick={() => setMobileOpen(false)}>Blog</Link>
           <a onClick={() => scrollTo('contact')}>Contact Us</a>
           <a className="btn-primary" onClick={() => scrollTo('contact')}>Enroll Now</a>
+          <div className="navbar__mobile-actions">
+            <Link
+              to="/college-partnership"
+              className="navbar__partner-btn"
+              onClick={() => setMobileOpen(false)}
+            >
+              Partner with Us
+            </Link>
+            <a
+              href="https://www.youtube.com/@ZetaNextMind"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="navbar__yt-btn"
+            >
+              <span className="navbar__yt-btn-inner">
+                <FaYoutube size={18} />
+                YouTube
+              </span>
+            </a>
+          </div>
         </div>
       )}
     </header>

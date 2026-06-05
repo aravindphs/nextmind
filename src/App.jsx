@@ -24,6 +24,7 @@ import HowItWorks from './components/HowItWorks';
 import DemoDay from './components/DemoDay';
 import InternshipCTA from './components/InternshipCTA';
 import Projects from './components/Projects';
+import YouTube from './components/YouTube';
 import Testimonials from './components/Testimonials';
 import Blog from './components/Blog';
 import FAQ from './components/FAQ';
@@ -76,6 +77,7 @@ function HomePage() {
       <DemoDay />
       <InternshipCTA />
       <Projects />
+      <YouTube />
       <Testimonials />
       <Blog />
       <FAQ />
