@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import Founder from './components/Founder';
 import LoadingScreen from './components/LoadingScreen';
 import WhatsAppFloat from './components/WhatsAppFloat';
+import ChatBot from './components/ChatBot';
 import EnquiryPopup from './components/EnquiryPopup';
 
 // Home page sections
@@ -105,6 +106,7 @@ function App() {
         <Route path="/terms-of-service" element={<LegalLayout><TermsOfService /></LegalLayout>} />
       </Routes>
       <WhatsAppFloat />
+      <ChatBot />
     </>
   );
 }

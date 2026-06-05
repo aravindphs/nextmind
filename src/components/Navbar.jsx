@@ -44,9 +44,7 @@ export default function Navbar() {
     <header className={`navbar${scrolled ? ' navbar--scrolled' : ''}`}>
       <div className="container navbar__inner">
         <Link to="/" className="navbar__logo">
-          <span className="logo-zeta">Zeta</span>
-          <span className="logo-next">Next</span>
-          <span className="logo-mind">mind</span>
+          <img src="/logo.png" alt="Zeta Nextmind" className="navbar__logo-img" />
         </Link>
 
         <nav className={`navbar__links${mobileOpen ? ' navbar__links--open' : ''}`}>

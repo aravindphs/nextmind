@@ -8,7 +8,7 @@ export default function Founder() {
         <div className="founder__inner">
           <div className="founder__left">
             <div className="founder__avatar-wrap">
-              <div className="founder__avatar">AK</div>
+              <img src="/founder.jpg" alt="Aravind Kumar" className="founder__avatar-img" />
               <div className="founder__avatar-ring founder__avatar-ring--1" />
               <div className="founder__avatar-ring founder__avatar-ring--2" />
             </div>

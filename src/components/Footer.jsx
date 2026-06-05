@@ -39,9 +39,7 @@ export default function Footer() {
         <div className="footer__top">
           <div className="footer__brand">
             <Link to="/" className="footer__logo">
-              <span className="logo-zeta">Zeta</span>
-              <span className="logo-next">Next</span>
-              <span className="logo-mind">mind</span>
+              <img src="/logo.png" alt="Zeta Nextmind" className="footer__logo-img" />
             </Link>
             <p className="footer__brand-desc">
               Empowering careers through AI-integrated software training. Join 600+

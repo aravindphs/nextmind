@@ -35,21 +35,16 @@
   flex-shrink: 0;
 }
 
-.founder__avatar {
+.founder__avatar-img {
   width: 240px;
   height: 240px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #e8192c 0%, #c0142a 50%, #7a0e1d 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 64px;
-  font-weight: 800;
-  font-family: 'Poppins', sans-serif;
-  color: white;
+  object-fit: cover;
+  object-position: center top;
   position: relative;
   z-index: 2;
-  box-shadow: 0 0 60px rgba(232, 25, 44, 0.25);
+  box-shadow: 0 0 60px rgba(232, 25, 44, 0.3), 0 8px 32px rgba(0,0,0,0.4);
+  border: 3px solid rgba(232, 25, 44, 0.4);
 }
 
 .founder__avatar-ring {

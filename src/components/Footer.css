@@ -26,15 +26,18 @@
 }
 
 .footer__logo {
-  font-family: 'Poppins', sans-serif;
-  font-size: 24px;
-  font-weight: 800;
+  display: inline-flex;
   margin-bottom: 16px;
   cursor: pointer;
 }
 
-.logo-zeta { color: #e8192c; }
-.logo-next { color: #ffffff; }
+.footer__logo-img {
+  height: 32px;
+  width: auto;
+  background: white;
+  border-radius: 6px;
+  padding: 4px 10px;
+}
 .logo-mind { color: var(--text-muted); }
 
 .footer__brand-desc {
