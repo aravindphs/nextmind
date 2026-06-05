@@ -26,11 +26,11 @@ const courseLinks = [
 ];
 
 const socials = [
-  { icon: FaFacebook, href: '#', title: 'Facebook' },
-  { icon: FaLinkedinIn, href: '#', title: 'LinkedIn' },
-  { icon: FaInstagram, href: '#', title: 'Instagram' },
+  { icon: FaFacebook, href: 'https://www.facebook.com/profile.php?id=61579507443812', title: 'Facebook' },
+  { icon: FaLinkedinIn, href: 'https://www.linkedin.com/company/zeta-nextmind/', title: 'LinkedIn' },
+  { icon: FaInstagram, href: 'https://www.instagram.com/zetanextmind/', title: 'Instagram' },
   { icon: FaYoutube, href: 'https://www.youtube.com/@ZetaNextMind', title: 'YouTube' },
-  { icon: FaXTwitter, href: '#', title: 'X / Twitter' },
+  // { icon: FaXTwitter, href: '#', title: 'X / Twitter' },
 ];
 
 export default function Footer() {
