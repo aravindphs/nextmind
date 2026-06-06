@@ -13,7 +13,7 @@ const faqs = [
   },
   {
     q: 'Is the certificate recognised by employers?',
-    a: 'Our certificate carries the Zeta Nextmind seal and Aravind Kumar\'s signature. More importantly, you graduate with 3 deployed live projects, a polished GitHub portfolio, and a LinkedIn profile reviewed by our placement team. Employers hire you for your work — the certificate validates it.',
+    a: 'Our certificate carries the Zeta Nextmind seal and CEO\'s signature. More importantly, you graduate with 3 deployed live projects, a polished GitHub portfolio, and a LinkedIn profile reviewed by our placement team. Employers hire you for your work — the certificate validates it.',
   },
   {
     q: 'How do AI tools fit into the course — are they extras or core?',

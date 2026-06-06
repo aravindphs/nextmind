@@ -180,7 +180,7 @@ export const intents = [
   // ─── Certificate ─────────────────────────────────────────────────
   {
     keywords: ['certificate', 'certification', 'recognised', 'recognized', 'valid', 'industry', 'credential'],
-    answer: `Our certificate carries the **Zeta Nextmind seal** and Aravind Kumar's signature 📜\n\nBut more importantly, employers look at your **deployed projects, GitHub portfolio, and interview performance** — not just the certificate. Our placement process makes sure you have all three.\n\nThe certificate validates what your portfolio already proves.`,
+    answer: `Our certificate carries the **Zeta Nextmind seal** and CEO's signature 📜\n\nBut more importantly, employers look at your **deployed projects, GitHub portfolio, and interview performance** — not just the certificate. Our placement process makes sure you have all three.\n\nThe certificate validates what your portfolio already proves.`,
     quickReplies: ['Tell me about placement', 'Book a free demo'],
   },
 

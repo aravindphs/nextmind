@@ -1,11 +1,12 @@
-import { ArrowRight, CheckCircle } from 'lucide-react';
+// import { ArrowRight, CheckCircle } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import './Hero.css';
 
-const highlights = [
-  '600+ Students Trained',
-  '90% Placement Rate',
-  '15+ Expert Instructors',
-];
+// const highlights = [
+//   '600+ Students Trained',
+//   '90% Placement Rate',
+//   '15+ Expert Instructors',
+// ];
 
 export default function Hero() {
   const scrollTo = (id) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
@@ -28,14 +29,14 @@ export default function Hero() {
             transformed their careers with Zeta Nextmind.
           </p>
 
-          <div className="hero__highlights">
+          {/* <div className="hero__highlights">
             {highlights.map((h) => (
               <div key={h} className="hero__highlight">
                 <CheckCircle size={16} color="#22c55e" />
                 <span>{h}</span>
               </div>
             ))}
-          </div>
+          </div> */}
 
           <div className="hero__actions">
             <button className="btn-primary" onClick={() => scrollTo('contact')}>
