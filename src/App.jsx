@@ -82,7 +82,12 @@ const HOME_JSONLD = [
     email: 'admissions@zetanextmind.com',
     priceRange: '₹₹',
     openingHours: 'Mo-Sa 09:00-20:00',
-    sameAs: ['https://www.youtube.com/@ZetaNextMind'],
+    sameAs: [
+      'https://www.youtube.com/@ZetaNextMind',
+      'https://www.instagram.com/zetanextmind/',
+      'https://www.linkedin.com/company/zeta-nextmind/',
+      'https://www.facebook.com/profile.php?id=61579507443812',
+    ],
     founder: { '@type': 'Person', name: 'Aravind Kumar' },
   },
   {
