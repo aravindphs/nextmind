@@ -56,7 +56,7 @@ export default function Courses() {
                 )}
                 <div className="course-card__top" style={{ borderColor: `${course.color}40` }}>
                   <div className="course-card__icon" style={{ background: `${course.color}18` }}>
-                    <span style={{ color: course.color, fontSize: 24, fontWeight: 800, fontFamily: 'Poppins' }}>
+                    <span style={{ color: course.color, fontSize: 24, fontWeight: 800, fontFamily: 'Sora' }}>
                       {course.title.charAt(0)}
                     </span>
                   </div>

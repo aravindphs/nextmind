@@ -19,7 +19,7 @@ export default class ErrorBoundary extends Component {
           justifyContent: 'center', minHeight: '70vh', gap: 20,
           padding: 32, textAlign: 'center', fontFamily: 'Inter, sans-serif',
         }}>
-          <h2 style={{ color: '#e8192c', fontFamily: 'Poppins, sans-serif', fontSize: 28 }}>
+          <h2 style={{ color: '#e8192c', fontFamily: 'Sora, sans-serif', fontSize: 28 }}>
             Something went wrong
           </h2>
           <p style={{ color: '#8892b0', maxWidth: 400 }}>

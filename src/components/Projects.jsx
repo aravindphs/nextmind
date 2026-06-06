@@ -4,10 +4,10 @@ import { projects } from '../data/projectsData';
 import './Projects.css';
 
 const iconMap = {
-  smartapp: () => <span style={{ fontSize: 22, fontWeight: 800, fontFamily: 'Poppins' }}>S</span>,
-  webgenix: () => <span style={{ fontSize: 22, fontWeight: 800, fontFamily: 'Poppins' }}>W</span>,
-  datainsight: () => <span style={{ fontSize: 22, fontWeight: 800, fontFamily: 'Poppins' }}>D</span>,
-  codeoptimizer: () => <span style={{ fontSize: 22, fontWeight: 800, fontFamily: 'Poppins' }}>C</span>,
+  smartapp: () => <span style={{ fontSize: 22, fontWeight: 800, fontFamily: 'Sora' }}>S</span>,
+  webgenix: () => <span style={{ fontSize: 22, fontWeight: 800, fontFamily: 'Sora' }}>W</span>,
+  datainsight: () => <span style={{ fontSize: 22, fontWeight: 800, fontFamily: 'Sora' }}>D</span>,
+  codeoptimizer: () => <span style={{ fontSize: 22, fontWeight: 800, fontFamily: 'Sora' }}>C</span>,
 };
 
 export default function Projects() {

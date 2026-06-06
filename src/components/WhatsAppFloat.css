@@ -20,19 +20,21 @@
   box-shadow: 0 8px 32px rgba(37, 211, 102, 0.7);
 }
 
-.wa-float::before {
-  content: '';
+.wa-ripple {
   position: absolute;
-  inset: -8px;
+  inset: 0;
   border-radius: 50%;
-  border: 2px solid rgba(37, 211, 102, 0.45);
-  animation: wa-pulse 2.2s ease-out infinite;
+  border: 2px solid rgba(37, 211, 102, 0.6);
   pointer-events: none;
+  animation: wa-ripple-out 2.1s ease-out infinite;
 }
 
-@keyframes wa-pulse {
-  0% { opacity: 0.9; transform: scale(1); }
-  100% { opacity: 0; transform: scale(1.55); }
+.wa-ripple--2 { animation-delay: 0.7s; }
+.wa-ripple--3 { animation-delay: 1.4s; }
+
+@keyframes wa-ripple-out {
+  0%   { transform: scale(1);   opacity: 0.7; }
+  100% { transform: scale(2.5); opacity: 0;   }
 }
 
 @media (max-width: 480px) {

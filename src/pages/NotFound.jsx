@@ -11,11 +11,11 @@ export default function NotFound() {
         fontSize: 'clamp(80px, 15vw, 140px)', fontWeight: 900, lineHeight: 1,
         background: 'linear-gradient(135deg, #e8192c, #c0111f)',
         WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent',
-        fontFamily: 'Poppins, sans-serif',
+        fontFamily: 'Sora, sans-serif',
       }}>
         404
       </div>
-      <h2 style={{ color: 'var(--text-primary)', fontFamily: 'Poppins, sans-serif', fontSize: 'clamp(20px, 4vw, 28px)', margin: 0 }}>
+      <h2 style={{ color: 'var(--text-primary)', fontFamily: 'Sora, sans-serif', fontSize: 'clamp(20px, 4vw, 28px)', margin: 0 }}>
         Page Not Found
       </h2>
       <p style={{ color: 'var(--text-secondary)', maxWidth: 420, lineHeight: 1.7 }}>
