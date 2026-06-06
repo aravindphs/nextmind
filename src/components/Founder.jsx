@@ -1,7 +1,44 @@
-import { Mail } from 'lucide-react';
+import { useEffect } from 'react';
+import { Mail, Calendar, Users } from 'lucide-react';
 import './Founder.css';
 
+function loadCal() {
+  if (window.Cal) return;
+  /* eslint-disable */
+  (function (C, A, L) {
+    let p = function (a, ar) { a.q.push(ar); };
+    let d = C.document;
+    C.Cal = C.Cal || function () {
+      let cal = C.Cal, ar = arguments;
+      if (!cal.loaded) {
+        cal.ns = {}; cal.q = cal.q || [];
+        d.head.appendChild(d.createElement('script')).src = A;
+        cal.loaded = true;
+      }
+      if (ar[0] === L) {
+        const api = function () { p(api, arguments); };
+        const ns = ar[1];
+        api.q = api.q || [];
+        if (typeof ns === 'string') { cal.ns[ns] = cal.ns[ns] || api; p(cal.ns[ns], ar); p(cal, ['-', ns, api]); }
+        else p(cal, ar);
+        return;
+      }
+      p(cal, ar);
+    };
+  })(window, 'https://app.cal.com/embed/embed.js', 'init');
+  /* eslint-enable */
+  window.Cal('init', { origin: 'https://cal.com' });
+  window.Cal('ui', {
+    theme: 'dark',
+    styles: { branding: { brandColor: '#e8192c' } },
+    hideEventTypeDetails: false,
+    layout: 'month_view',
+  });
+}
+
 export default function Founder() {
+  useEffect(() => { loadCal(); }, []);
+
   return (
     <section className="founder" id="founder">
       <div className="container">
@@ -43,6 +80,25 @@ export default function Founder() {
             <p className="founder__note">
               I personally read and respond to every email. You can expect a reply within 48 hours.
             </p>
+
+            <div className="founder__booking">
+              <button
+                data-cal-link="zetacorpsolutions/student-course-career-mentorship"
+                data-cal-config='{"layout":"month_view"}'
+                className="founder__book-btn founder__book-btn--primary"
+              >
+                <Calendar size={15} />
+                Book a Mentorship Call
+              </button>
+              <button
+                data-cal-link="zetacorpsolutions/academic-college-partnership-discussion"
+                data-cal-config='{"layout":"month_view"}'
+                className="founder__book-btn founder__book-btn--outline"
+              >
+                <Users size={15} />
+                Partnership Discussion
+              </button>
+            </div>
           </div>
         </div>
       </div>

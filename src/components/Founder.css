@@ -122,6 +122,60 @@
   margin-top: -4px;
 }
 
+/* ─── Cal.com booking buttons ─────────────────────────────────── */
+.founder__booking {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.founder__book-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  transition: all 0.22s ease;
+  white-space: nowrap;
+}
+
+.founder__book-btn--primary {
+  background: linear-gradient(135deg, #e8192c, #c0111f);
+  border: none;
+  color: white;
+  box-shadow: 0 4px 16px rgba(232, 25, 44, 0.35);
+}
+
+.founder__book-btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(232, 25, 44, 0.5);
+}
+
+.founder__book-btn--outline {
+  background: transparent;
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  color: var(--text-secondary);
+}
+
+.founder__book-btn--outline:hover {
+  border-color: rgba(232, 25, 44, 0.5);
+  color: var(--text-primary);
+  background: rgba(232, 25, 44, 0.06);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+  .founder__booking {
+    justify-content: center;
+  }
+}
+
+
 .founder__sig-name {
   font-size: 18px;
   font-weight: 700;
