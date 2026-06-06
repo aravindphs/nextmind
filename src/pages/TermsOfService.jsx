@@ -1,3 +1,4 @@
+import SEOMeta from '../components/SEOMeta';
 import './LegalPage.css';
 
 const sections = [
@@ -94,6 +95,11 @@ Last updated: June 2025`,
 export default function TermsOfService() {
   return (
     <div className="legal-page">
+      <SEOMeta
+        title="Terms of Service"
+        description="Zeta Nextmind's terms of service — enrollment conditions, payment terms, certification requirements, and your rights as a student."
+        canonical="/terms-of-service"
+      />
       <div className="container">
         <div className="legal-page__header">
           <div className="section-tag">Legal</div>

@@ -2,6 +2,7 @@ import { useRef, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { ArrowLeft, Clock, Users, Star, ArrowRight, CheckCircle2 } from 'lucide-react';
 import { coursesData } from '../data/coursesData';
+import SEOMeta from '../components/SEOMeta';
 import './CourseDetail.css';
 
 function CourseRoadmap({ roadmap, color }) {
@@ -111,8 +112,39 @@ export default function CourseDetail() {
 
   const { title, tagline, desc, duration, students, rating, tags, color, badge, idealFor, aiTools, roadmap } = course;
 
+  const courseJsonLd = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Course',
+      name: title,
+      description: `${tagline}. ${desc}`,
+      url: `https://zetanextmind.com/courses/${slug}`,
+      provider: { '@type': 'Organization', name: 'Zeta Nextmind', url: 'https://zetanextmind.com' },
+      courseMode: ['onsite', 'online'],
+      inLanguage: 'en-IN',
+      timeRequired: `P${course.durationWeeks}W`,
+      teaches: tags.join(', '),
+      aggregateRating: { '@type': 'AggregateRating', ratingValue: rating, bestRating: '5', ratingCount: students.replace('+', '') },
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://zetanextmind.com' },
+        { '@type': 'ListItem', position: 2, name: 'Courses', item: 'https://zetanextmind.com/#courses' },
+        { '@type': 'ListItem', position: 3, name: title, item: `https://zetanextmind.com/courses/${slug}` },
+      ],
+    },
+  ];
+
   return (
     <div className="cd">
+      <SEOMeta
+        title={`${title} Course in Coimbatore`}
+        description={`${tagline}. ${duration} AI-integrated training in Coimbatore with live projects, placement support, and real AI tools. ${students} students trained, ${rating}★ rated. Enroll at Zeta Nextmind.`}
+        canonical={`/courses/${slug}`}
+        jsonLd={courseJsonLd}
+      />
       {/* Hero */}
       <div className="cd__hero" style={{ borderBottom: `1px solid ${color}30` }}>
         <div className="cd__hero-glow" style={{ background: `radial-gradient(circle at 70% 50%, ${color}15, transparent 60%)` }} />

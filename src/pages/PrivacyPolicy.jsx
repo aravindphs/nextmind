@@ -1,3 +1,4 @@
+import SEOMeta from '../components/SEOMeta';
 import './LegalPage.css';
 
 const sections = [
@@ -113,6 +114,11 @@ Last updated: June 2025`,
 export default function PrivacyPolicy() {
   return (
     <div className="legal-page">
+      <SEOMeta
+        title="Privacy Policy"
+        description="Zeta Nextmind's privacy policy — how we collect, use, and protect your personal data when you use our website and enroll in our training programs."
+        canonical="/privacy-policy"
+      />
       <div className="container">
         <div className="legal-page__header">
           <div className="section-tag">Legal</div>

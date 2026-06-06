@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import SEOMeta from '../components/SEOMeta';
 import {
   GraduationCap, Users, BookOpen, Award, TrendingUp, Handshake,
   CheckCircle2, Send, CheckCircle, ArrowRight
@@ -136,6 +137,19 @@ export default function CollegePartnership() {
 
   return (
     <div className="cp">
+      <SEOMeta
+        title="Campus Training Partnership for Colleges in Tamil Nadu"
+        description="Bring AI-integrated tech training to your campus. Trusted by 20+ colleges across Tamil Nadu. Bulk enrollment discounts, dedicated academic liaison, dual certification, and full placement support. Contact Zeta Nextmind today."
+        canonical="/college-partnership"
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://zetanextmind.com' },
+            { '@type': 'ListItem', position: 2, name: 'Campus Partnership', item: 'https://zetanextmind.com/college-partnership' },
+          ],
+        }}
+      />
       {/* Hero */}
       <div className="cp__hero">
         <div className="cp__hero-glow" />

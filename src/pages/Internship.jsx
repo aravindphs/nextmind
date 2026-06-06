@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { BookOpen, Code2, PenLine, Settings, CheckCircle2, ArrowRight, CheckCircle } from 'lucide-react';
+import SEOMeta from '../components/SEOMeta';
 import './Internship.css';
 
 const programs = [
@@ -75,6 +76,19 @@ export default function Internship() {
 
   return (
     <div className="intern">
+      <SEOMeta
+        title="Paid Tech Internship Program in Coimbatore"
+        description="4 internship tracks at Zeta Nextmind: Teaching Assistant, Live Project Internship, Content & Marketing, and Tech & Automation. Paid stipend, portfolio projects, reference letter from the founder. Remote-friendly. Apply now."
+        canonical="/internship"
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://zetanextmind.com' },
+            { '@type': 'ListItem', position: 2, name: 'Internship', item: 'https://zetanextmind.com/internship' },
+          ],
+        }}
+      />
       {/* Hero */}
       <div className="intern__hero">
         <div className="intern__hero-glow" />

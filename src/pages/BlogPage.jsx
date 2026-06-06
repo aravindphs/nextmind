@@ -1,11 +1,17 @@
 import { ArrowRight, Calendar, Clock } from 'lucide-react';
 import { blogPosts } from '../data/blogPosts';
+import SEOMeta from '../components/SEOMeta';
 import '../components/Blog.css';
 import './BlogPage.css';
 
 export default function BlogPage() {
   return (
     <div className="blog-page">
+      <SEOMeta
+        title="Blog — AI & Software Training Insights"
+        description="Articles on AI-integrated learning, software development careers, placement tips, student project stories, and industry trends from the Zeta Nextmind team in Coimbatore."
+        canonical="/blog"
+      />
       <div className="container">
         <div className="section-header blog-page__header">
           <div className="section-tag">Knowledge Hub</div>
