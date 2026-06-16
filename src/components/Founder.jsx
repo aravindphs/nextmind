@@ -45,12 +45,12 @@ export default function Founder() {
         <div className="founder__inner">
           <div className="founder__left">
             <div className="founder__avatar-wrap">
-              <img src="/founder.jpg" alt="Aravind Kumar" className="founder__avatar-img" />
+              
               <div className="founder__avatar-ring founder__avatar-ring--1" />
               <div className="founder__avatar-ring founder__avatar-ring--2" />
             </div>
             <div className="founder__identity">
-              <span className="founder__sig-name">Aravind Kumar</span>
+              <span className="founder__sig-name">Nitheesh Prabhu</span>
               <span className="founder__sig-role">Founder &amp; CEO, Zeta Nextmind</span>
             </div>
           </div>
