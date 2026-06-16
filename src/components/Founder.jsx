@@ -58,7 +58,7 @@ export default function Founder() {
           <div className="founder__content">
             <div className="section-tag">From the Founder</div>
             <h2 className="founder__headline">
-              Have a question? Write directly to <span>Aravind Kumar</span>
+              Have a question? Write directly to <span>Nitheesh Prabhu</span>
             </h2>
             <p className="founder__message">
               Every student who walks through our doors carries a dream — to build, to create, and to
